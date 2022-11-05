@@ -1,5 +1,5 @@
 // #include "PandemoniumMath.h"
-// #include "PandemoniumLog.h"
+#include "PandemoniumLog.h"
 
 #ifdef PANDEMONIUM_PLATFORM_WINDOWS
 	#ifdef PANDEMONIUM_BUILD_DLL
