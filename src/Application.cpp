@@ -1,4 +1,5 @@
 #include "Application.h"
+#include "Input.h"
 
 namespace Pandemonium {
 
@@ -35,13 +36,13 @@ namespace Pandemonium {
 	}
 
 	void Application::Run() {
-		// WindowResizeEvent e(1280, 720);
-		// LOG_DEBUG(e.ToString().data());
-
 		while(m_Running) {
 			for(Layer* layer : m_LayerStack) {
 				layer->OnUpdate();
 			}
+
+			auto [x, y] = Input::GetMousePos();
+			LOG_INFO("%f, %f", x, y);
 
 			m_Window->OnUpdate();
 		}
