@@ -13,18 +13,23 @@ namespace Pandemonium {
 		Application();
 		virtual ~Application();
 
-		void Run();
+		void					   Run();
 
-		void OnEvent(Event& e);
+		void					   OnEvent(Event& e);
 
-		void PushLayer(Layer* layer);
-		void PushOverlay(Layer* layer);
+		void					   PushLayer(Layer* layer);
+		void					   PushOverlay(Layer* layer);
+
+		inline static Application& Get() { return *s_Instance; }
+		inline Window&			   GetWindow() { return *m_Window; }
 	private:
 		bool					OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool					m_Running = true;
 		LayerStack				m_LayerStack;
+	private:
+		inline static Application* s_Instance = nullptr;
 	};
 
 	Application* CreateApplication();
