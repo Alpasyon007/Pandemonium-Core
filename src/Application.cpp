@@ -27,8 +27,6 @@ namespace Pandemonium {
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(std::bind(&Application::OnWindowClose, this, std::placeholders::_1));
 
-		LOG_INFO(e.ToString());
-
 		for(std::vector<Layer*>::iterator it = m_LayerStack.end(); it != m_LayerStack.begin();) {
 			(*--it)->OnEvent(e);
 			if(e.Handled) { break; }
@@ -40,9 +38,6 @@ namespace Pandemonium {
 			for(Layer* layer : m_LayerStack) {
 				layer->OnUpdate();
 			}
-
-			auto [x, y] = Input::GetMousePos();
-			LOG_INFO("%f, %f", x, y);
 
 			m_Window->OnUpdate();
 		}

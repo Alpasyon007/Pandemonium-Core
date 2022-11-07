@@ -1,16 +1,25 @@
-# target_sources(
-# 	PandemoniumCore
-# 	PUBLIC
-#     ${CMAKE_CURRENT_SOURCE_DIR}/Include/PandemoniumCore.h
-# 	${CMAKE_CURRENT_SOURCE_DIR}/headers/Core.h
-# 	${CMAKE_CURRENT_SOURCE_DIR}/headers/Application.h
-# 	${CMAKE_CURRENT_SOURCE_DIR}/src/Application.cpp
-# )
+target_sources(
+	PandemoniumCore
+	PUBLIC
+	${CMAKE_CURRENT_SOURCE_DIR}/Include/PandemoniumCore.h
+	${CMAKE_CURRENT_SOURCE_DIR}/headers/Window.h
+	${CMAKE_CURRENT_SOURCE_DIR}/headers/EntryPoint.h
+	${CMAKE_CURRENT_SOURCE_DIR}/src/Core.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/headers/Core.h
+	${CMAKE_CURRENT_SOURCE_DIR}/src/Application.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/headers/Application.h
+	${CMAKE_CURRENT_SOURCE_DIR}/src/Layer.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/headers/Layer.h
+	${CMAKE_CURRENT_SOURCE_DIR}/src/LayerStack.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/headers/LayerStack.h
+	${CMAKE_CURRENT_SOURCE_DIR}/headers/Input.h
+	${CMAKE_CURRENT_SOURCE_DIR}/headers/KeyCodes.h
+	${CMAKE_CURRENT_SOURCE_DIR}/headers/MouseButtonCodes.h
+)
 
-# target_include_directories(
-# 	PandemoniumCore 
-# 	PUBLIC 
-# 	${CMAKE_CURRENT_SOURCE_DIR}/headers
-#     ${CMAKE_CURRENT_SOURCE_DIR}/src
-#     ../Pandemonium-Math/Include
-# )
+target_include_directories(
+	PandemoniumCore 
+	PUBLIC 
+	${CMAKE_CURRENT_SOURCE_DIR}/headers
+	${CMAKE_CURRENT_SOURCE_DIR}/src
+)
