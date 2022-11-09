@@ -24,4 +24,5 @@ target_include_directories(
 			${CMAKE_CURRENT_SOURCE_DIR}/../Pandemonium-Log/Include
 			${CMAKE_CURRENT_SOURCE_DIR}/../ThirdParty/glfw/Include
 			${CMAKE_CURRENT_SOURCE_DIR}/../ThirdParty/glad/Include
+			${CMAKE_CURRENT_SOURCE_DIR}/../Pandemonium-Renderer/headers
 )

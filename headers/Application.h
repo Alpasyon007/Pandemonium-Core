@@ -9,6 +9,8 @@
 
 #include "ImGuiLayer.h"
 
+#include "Shader.h"
+
 namespace Pandemonium {
 	class PANDEMONIUM_API Application {
 	public:
@@ -34,6 +36,7 @@ namespace Pandemonium {
 		LayerStack				m_LayerStack;
 
 		unsigned int			m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		std::unique_ptr<Shader> m_Shader;
 	private:
 		inline static Application* s_Instance = nullptr;
 	};
