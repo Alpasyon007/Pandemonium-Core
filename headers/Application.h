@@ -41,7 +41,7 @@ namespace Pandemonium {
 		std::shared_ptr<VertexArray> m_VertexArray;
 
 		std::shared_ptr<VertexArray> m_SquareVA;
-		std::shared_ptr<Shader>		 blueShader;
+		std::shared_ptr<Shader>		 m_BlueShader;
 	private:
 		inline static Application* s_Instance = nullptr;
 	};
