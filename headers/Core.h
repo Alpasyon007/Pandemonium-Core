@@ -1,3 +1,6 @@
+#ifndef CORE_H
+#define CORE_H
+
 // #include "PandemoniumMath.h"
 #include "PandemoniumLog.h"
 
@@ -10,3 +13,5 @@
 #else
 	#error NO PLATFORMS DEFINED
 #endif
+
+#endif /* CORE_H */
