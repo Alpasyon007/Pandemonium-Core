@@ -10,6 +10,7 @@
 #include "ImGuiLayer.h"
 
 #include "Buffer.h"
+#include "OrthographicCamera.h"
 #include "Shader.h"
 #include "VertexArray.h"
 
@@ -42,6 +43,8 @@ namespace Pandemonium {
 
 		std::shared_ptr<VertexArray> m_SquareVA;
 		std::shared_ptr<Shader>		 m_BlueShader;
+
+		OrthographicCamera			 m_Camera;
 	private:
 		inline static Application* s_Instance = nullptr;
 	};
