@@ -4,6 +4,8 @@
 #include "Core.h"
 #include "Event.h"
 
+#include "Timestep.h"
+
 namespace Pandemonium {
 
 	class PANDEMONIUM_API Layer {
@@ -15,7 +17,7 @@ namespace Pandemonium {
 
 		virtual void			  OnDetach() {}
 
-		virtual void			  OnUpdate() {}
+		virtual void			  OnUpdate(Timestep ts) {}
 
 		virtual void			  OnImGuiRender() {}
 

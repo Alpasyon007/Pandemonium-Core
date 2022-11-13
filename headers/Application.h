@@ -7,12 +7,9 @@
 #include "LayerStack.h"
 #include "Window.h"
 
-#include "ImGuiLayer.h"
+#include "Timestep.h"
 
-#include "Buffer.h"
-#include "OrthographicCamera.h"
-#include "Shader.h"
-#include "VertexArray.h"
+#include "ImGuiLayer.h"
 
 namespace Pandemonium {
 	class PANDEMONIUM_API Application {
@@ -31,12 +28,13 @@ namespace Pandemonium {
 
 		inline Window&			   GetWindow() { return *m_Window; }
 	private:
-		bool					OnWindowClose(WindowCloseEvent& e);
-
+		bool OnWindowClose(WindowCloseEvent& e);
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer*				m_ImGuiLayer;
 		bool					m_Running = true;
 		LayerStack				m_LayerStack;
+		float					m_LastFrameTime = 0.0f;
 	private:
 		inline static Application* s_Instance = nullptr;
 	};
