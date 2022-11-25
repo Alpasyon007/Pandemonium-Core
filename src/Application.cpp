@@ -45,7 +45,7 @@ namespace Pandemonium {
 
 	void Application::Run() {
 		while(m_Running) {
-			float	 time	  = (float)glfwGetTime(); // Should be Platform::GetTime();
+			float	 time	  = static_cast<float>(glfwGetTime()); // Should be Platform::GetTime();
 			Timestep timestep = time - m_LastFrameTime;
 			m_LastFrameTime	  = time;
 
