@@ -1,7 +1,9 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include "ppch.h"
+#include <functional>
+#include <string>
+
 #include "Core.h"
 #include "Event.h"
 
