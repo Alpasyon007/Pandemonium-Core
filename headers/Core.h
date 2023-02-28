@@ -1,6 +1,7 @@
 #ifndef CORE_H
 #define CORE_H
 
+#include "Instrumentor.h"
 #include "Platform.h"
 
 #include <PandemoniumLog.h>
